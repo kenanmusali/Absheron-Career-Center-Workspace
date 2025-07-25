@@ -1,0 +1,110 @@
+  @media screen and (max-width: 580px) {
+      .background-item {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          gap: var(--safe-place);
+          align-items: center;
+          width: 100%;
+      }
+
+      .section-group {
+          height: fit-content;
+          max-width: 100% !important;
+          overflow: hidden;
+          padding: var(--safe-place);
+          border-radius: var(--main-radius);
+          background-color: var(--white-color);
+      }
+
+      .title {
+          font-size: 22px;
+          color: var(--text-color);
+          font-weight: 600;
+      }
+
+      .description {
+          font-size: 16px;
+          color: var(--text-color);
+          width: 100%;
+      }
+
+      .image {
+          filter: var(--primary-color-filter);
+          width: 40px;
+          margin-bottom: var(--inner-safe-gap);
+      }
+
+      .background-group {
+          box-shadow: var(--main-shadow);
+          height: fit-content;
+          width: 100%;
+          padding: var(--inner-safe-gap);
+          border-radius: var(--main-radius);
+          background-color: var(--white-color);
+          transition: all 0.3s;
+          position: relative;
+      }
+
+      .background {
+          background-color: var(--background-color);
+          height: 100%;
+          width: 100%;
+          padding: var(--safe-place);
+          display: flex;
+          flex-direction: column;
+          gap: var(--safe-place);
+          overflow-y: scroll;
+      }
+
+      .background-group {
+        order: 1;
+      }
+
+      .background-item {
+        order: 2;
+      }
+  }
+
+
+  @media screen and (min-width: 580px) and (max-width: 1111px) {
+      .section-group {
+          height: 10rem;
+          max-width: 100% !important;
+          overflow: hidden;
+          padding: var(--safe-place);
+          border-radius: var(--main-radius);
+          background-color: var(--white-color);
+      }
+
+      .background-item {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: var(--safe-place);
+          align-items: center;
+          width: 100%;
+      }
+
+      .background-group {
+          box-shadow: var(--main-shadow);
+          height: fit-content;
+          width: 100%;
+          padding: var(--inner-safe-gap);
+          border-radius: var(--main-radius);
+          background-color: var(--white-color);
+          transition: all 0.3s;
+          position: relative;
+      }
+
+      .background {
+          background-color: var(--background-color);
+          height: 100% !important;
+          width: 100%;
+          padding: var(--safe-place);
+          display: flex;
+          flex-direction: column;
+          gap: var(--safe-place);
+          overflow-y: scroll;
+      }
+  }
