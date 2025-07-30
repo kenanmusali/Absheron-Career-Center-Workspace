@@ -14,14 +14,15 @@
 
         <div class="background-item">
 
-            <a href="" target="_blank">
+            <a href="https://akm-birthday.vercel.app/" target="_blank">
                 <div class="section-group No-Select animated-1">
                     <img class="image" src="./assets/svg/person.crop.rectangle.svg">
                     <div class="title">Ad günü postu</div>
                     <div class="description large">Bu bölmə şirkət əməkdaşlarının ad günlərini göstərir.</div>
                 </div>
             </a>
-            <a href="" target="_blank">
+
+            <a href="https://akm-anniversary.vercel.app/" target="_blank">
                 <div class="section-group No-Select animated-2">
                     <img class="image" src="./assets/svg/rosette.svg">
                     <div class="title">İllik ildönümü</div>
@@ -29,13 +30,15 @@
                     </div>
                 </div>
             </a>
-            <a href="" target="_blank">
-                <div class="section-group No-Select animated-3">
+
+            <a href="https://akm-signature.vercel.app/" target="_blank">
+                <div class="section-group No-Select animated-3 animated-3hover">
                     <img class="image" src="./assets/svg/signature.svg">
                     <div class="title">İmzam</div>
                     <div class="description large">İmzanızı göstərir və ya outlook-da yaratmağa imkan verir.</div>
                 </div>
             </a>
+
             <a href="https://career.absheronport.az/" target="_blank">
                 <div class="section-group No-Select animated-4">
                     <img class="image" src="./assets/svg/display.svg">
@@ -43,14 +46,16 @@
                     <div class="description">Bu, Abşeron Logistika Mərkəzinin rəsmi karyera portalıdır.</div>
                 </div>
             </a>
+
             <a href="http://172.25.60.81/itsupport/public/appeals/list" target="_blank">
-                <div class="section-group No-Select animated-5">
+                <div class="section-group No-Select animated-5 animated-5hover">
                     <img class="image" src="./assets/svg/externaldrive.connected.to.line.below.svg">
                     <div class="title">İT dəstək</div>
                     <div class="description">Texniki problemlərin və ya xidmət tələblərinin qeydiyyatı və izlənməsi.
                     </div>
                 </div>
             </a>
+
             <a href="" target="_blank">
                 <div class="section-group No-Select animated-6">
                     <img class="image" src="./assets/svg/person.2.svg">
@@ -60,12 +65,38 @@
             </a>
 
         </div>
-
         <div class="background-group No-Select animated-3">
-            <img class="No-Select" src="./assets/img/akmcover.png">
-            <img class="No-Select sertificate" src="./assets/img/download.png">
+            <img class="No-Select imagehover1 animated-1" src="./assets/img/akmcover.png">
+            <img class="No-Select imagehover2 animated-1" src="./assets/img/download.png">
+            <img class="No-Select imagehover3 animated-1" src="./assets/img/download1.png">
         </div>
     </div>
 </body>
+<script>
+    
+  document.querySelector('.animated-3hover').addEventListener('mouseenter', () => {
+    document.querySelector('.imagehover2').style.display = 'block';
+    document.querySelector('.imagehover1').style.display = 'none';
+    document.querySelector('.imagehover3').style.display = 'none';
+  });
+
+  document.querySelector('.animated-3hover').addEventListener('mouseleave', () => {
+    document.querySelector('.imagehover2').style.display = 'none';
+    document.querySelector('.imagehover3').style.display = 'none';
+    document.querySelector('.imagehover1').style.display = 'block';
+  });
+
+  document.querySelector('.animated-5hover').addEventListener('mouseenter', () => {
+    document.querySelector('.imagehover2').style.display = 'none';
+    document.querySelector('.imagehover1').style.display = 'none';
+    document.querySelector('.imagehover3').style.display = 'block';
+  });
+  document.querySelector('.animated-5hover').addEventListener('mouseleave', () => {
+    document.querySelector('.imagehover2').style.display = 'none';
+    document.querySelector('.imagehover1').style.display = 'block';
+    document.querySelector('.imagehover3').style.display = 'none';
+  });
+</script>
+
 
 </html>
