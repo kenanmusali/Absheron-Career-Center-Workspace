@@ -1,26 +1,22 @@
-document.addEventListener('keydown', (e) => {
-    // Detect PrintScreen (44) or Mac screenshots (Shift+Cmd+3/4)
-    if (e.key === 'PrintScreen' || e.keyCode === 44 || 
-        (e.metaKey && e.shiftKey && [51, 52, 53].includes(e.keyCode))) {
+function copyToClipboard(elementId) {
+  var aux = document.createElement("input");
+  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+}
+
+$(document).ready(function(){
+    $(window).keyup(function(e){
+      if(e.keyCode == 44){
+        copyToClipboard('test');        
+        $("body").hide();
         
-        // Nuclear option: Replace entire page
-        document.body.innerHTML = `
-            <div style="
-                position:fixed;
-                top:0; left:0;
-                width:100vw; height:100vh;
-                background:black;
-                color:red;
-                font-size:2em;
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                z-index:999999;
-            ">
-                SCREENSHOT BLOCKED
-            </div>
-        `;
-        
-        e.preventDefault();
-    }
+        // Show the body again after 10 seconds (10000 milliseconds)
+        setTimeout(function() {
+          $("body").show();
+        }, 10000);
+      };
+    });
 });
