@@ -30,6 +30,7 @@
     --main-shadow: 2px 3px 4px 0px var(--opacity-003-black-color);
     --unfocus-shadow: 0px 4px 4px 0px var(--opacity-007-black-color);
     --focused-shadow: 0px 2px 2px 0px var(--opacity-007-black-color);
+    
 }
 
 .Main-Button {

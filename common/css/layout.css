@@ -16,6 +16,7 @@
   font-weight: 600;
   color: var(--white-color);
 
+
 }
 
 .background-group .text {
@@ -38,6 +39,8 @@
   padding: var(--safe-place);
   border-radius: var(--main-radius);
   background-color: var(--white-color);
+  box-shadow: var(--main-shadow);
+outline:2px solid transparent
 }
 
 
@@ -72,6 +75,8 @@
   scale: 1.05;
   box-shadow: var(--unfocus-shadow);
   transition: all 0.3s;
+  outline:2px solid var(--primary-color-half-opacity);
+  /* border: 1px solid var(--primary-color); */
 }
 
 .section-group:hover .title,
